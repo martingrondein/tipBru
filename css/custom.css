@@ -1,0 +1,48 @@
+.button {
+	font-size: 10px;
+}
+
+small {
+	font-size: 11px;
+}
+
+.toolbar-inner {
+	font-size: 12px;
+}
+
+.toolbar-through .page-content {
+	padding-bottom: 0px;
+}
+
+input[type=text] {
+	text-align: right;
+}
+
+.hide {
+	display: none;
+}
+
+.content-block {
+	margin-top: 0px;
+}
+
+.faded {
+	opacity: 0.3;
+}
+
+.page {
+	background: #fff;
+}
+
+.content-block {
+	color:#fff;
+}
+
+.button.button-round{
+	padding: 5px;
+    height: 40px;
+}
+
+.list-block .item-title.label {
+	width: 38%;
+}
