@@ -1,1 +1,3 @@
-License to go here
+# License
+
+Free to use, modify and redistribute.
