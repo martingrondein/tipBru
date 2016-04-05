@@ -7,28 +7,34 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>tipBru</title>
     <!-- Path to Framework7 Library CSS-->
-    <link rel="stylesheet" href="dist/css/framework7.ios.min.css">
-  	<link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="dist/css/framework7.material.min.css">
+  	<link rel="stylesheet" href="dist/css/framework7.material.colors.min.css">
   	<link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/custom.css">
   </head>
-  <body>
+  <body class="theme-black">
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
-      <div class="content-block">
-		<p><strong>tipBru</strong></p>
-		<p><i>"Your waiter tipping friend."</i></p>
-		<p>tipBru is a free, lightweight tip calculating utility app. It can quickly calculate the tip on your bill when you're out and about. It saves you time and from making embarrassing under-tipping mistakes.</p>
-		<br/><br/><br/>
-		<p><i class="fa fa-flask"></i> Version 1.1.160409</p>		
-	  	<p>&copy; Copyright 2016.</p>
+		<div class="navbar">
+          <div class="navbar-inner">           
+            <div class="center"><i class="fa fa-info-circle"></i> Information</div>
+          </div>
+        </div>
+      <div class="content-block">		
+		<h2>How to use tipBru</h2>
+		  <p>Please enter the amount you owe from the bill. Then, select a Tip Generosity Level. tipBru will do the magic and work out the tip and the total amount you owe. </p>
+		  <p>Optional: Make payments easier by rounding off the Total amount. You can round off the Total amount into a whole number by using the "Round Up" button. This will round up the Total to the nearest 5. Tip % is also adjusted, so your waiter scores.</p>
+		<h2>About tipBru</h2>
+		  <p>tipBru is a free, lightweight tip calculating utility app. It can quickly calculate the tip on your bill when you're out and about. It saves you time and from making embarrassing under-tipping mistakes.</p>
+		<h2>App Info</h2>
+		<p><i class="fa fa-flask"></i> Version 2.0.160409</p>	  	
 		<p><i class="fa fa-code"></i> Developed by Martin Grondein.</p>
-	  	<p><button class="button bg-grey" onclick="window.open('http://www.grondein.com')"><strong>VISIT DEVELOPER WEBSITE</strong></button></p>
+	  	<p><button class="button button-fill button-raised" onclick="window.open('http://www.grondein.com')">Visit Developer's Website</button></p>
       </div>
     </div>    
     <!-- Views-->
@@ -38,8 +44,8 @@
         <!-- Top Navbar-->
         <div class="navbar">
           <div class="navbar-inner">
-            <div class="center sliding"><img src="img/logo.png" width="120" height="40"></div>
-            <div class="right"><a href="#" class="link icon-only open-panel"> <i class="fa fa-info-circle fa-2x"></i></a></div>
+			<img src="img/logo_v2_white.png" alt="tipBru" width="120" height="40" class="center">
+            <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a></div>
           </div>
         </div>
         <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
@@ -48,42 +54,38 @@
           <div data-page="index" class="page">
             <div class="page-content">
               <div class="content-block">
-                <div class="content-block-inner">
-                  <p>Please enter the amount on the bill you owe. Then, select a tip generosity level below. You can then choose to adjust your final amount by using the Round Up button.</p>
+                <div class="content-block-inner">                  
 					
-			<div class="list-block">
-                <ul>
-                  <li>
-                    <div class="item-content">
-                      <div class="item-media"><i class="fa fa-money"></i></div>
-                      <div class="item-inner"> 
-                        <div class="item-title label">Amount</div>
-                        <div class="item-input">
-                          <input type="number" placeholder="0.00" id="txtAmount" value="">
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-				</ul>
-				</div>
-						
+					<div class="list-block inputs-list">
+						<ul>
+						  <li>
+							<div class="item-content">
+							  <div class="item-media"><i class="fa fa-money fa-2x"></i></div>
+							  <div class="item-inner"> 
+								<div class="item-title label">Amount</div>
+								<div class="item-input item-input-field">
+								  <input type="number" placeholder="0.00" id="txtAmount" value="">
+								</div>
+							  </div>
+							</div>
+						  </li>
+						</ul>
+						</div>						
 
-				<div class="content-block-title"><center><strong><i class="fa fa-smile-o"></i> Tip Generosity Level <i class="fa fa-smile-o"></i></strong></center></div>
-					<div class="buttons-row"><a href="#" class="button button-round" id="tipStandard" onclick="tipStandard()"><strong>STANDARD</strong></a><a href="#" class="button button-round" id="tipKind" onclick="tipKind()"><strong>KIND</strong></a><a href="#" class="button button-round" id="tipGracious" onclick="tipGracious()"><strong>GENEROUS</strong></a></div>
-			<div class="row">
-				<div class="col-33"><center><small><strong>10%</strong></small></center></div>
-				<div class="col-33"><center><small><strong>15%</strong></small></center></div>
-				<div class="col-33"><center><small><strong>20%</strong></small></center></div>				
-			</div>				 
+					<p><strong>Tip Generosity Level</strong></p>
+					<p class="buttons-row"><a href="#" class="button button-raised button-fill color-blue" id="tipStandard" onclick="tipStandard()">Standard</a></p>
+					<p class="buttons-row"><a href="#" class="button button-raised button-fill color-purple" id="tipKind" onclick="tipKind()">Kind</a></p>
+					<p class="buttons-row"><a href="#" class="button button-raised button-fill color-green" id="tipGracious" onclick="tipGracious()">Generous</a></p>
+					 
 
-			<div class="list-block faded" id="calcContent">				
+			<div class="list-block inputs-list" id="calcContent">				
 				<ul>
                   <li>
                     <div class="item-content">
-                      <div class="item-media"><i class="fa fa-user"></i></div>
+                      <div class="item-media"><i class="fa fa-user fa-2x"></i></div>
                       <div class="item-inner"> 
                         <div class="item-title label" id="labelTip">Tip</div>
-                        <div class="item-input">
+                        <div class="item-input item-input-field">
                           <input type="text" placeholder="0.00" id="txtTip" value="">
                         </div>
                       </div>
@@ -91,10 +93,10 @@
                   </li>
 					<li>
                     <div class="item-content">
-                      <div class="item-media"><i class="fa fa-calculator"></i></div>
-                      <div class="item-inner "> 
+                      <div class="item-media"><i class="fa fa-calculator fa-2x"></i></div>
+                      <div class="item-inner"> 
                         <div class="item-title label">Total</div>
-                        <div class="item-input">
+                        <div class="item-input item-input-field">
                           <input type="text" placeholder="0.00" id="txtTotal" value="">
                         </div>
                       </div>
@@ -102,17 +104,17 @@
                   </li>
 				<li>
 				<div class="item-content">
-				  <div class="item-media"><i class="fa fa-arrow-circle-up"></i></div>
+				  <div class="item-media"><i class="fa fa-arrow-circle-up fa-2x"></i></div>
 				  <div class="item-inner"> 
-					<div class="item-title label">Adjust</div>
-					<label class="label-switch">
-						<center><button class="button" id="roundup" onclick="roundUp()"> Round Up</button></center>
-                  </label>					  
+<!--					<div class="item-title label">Adjust</div>-->
+<!--					<label class="label-switch">-->
+						<button class="button button-fill button-raised" id="roundup" onclick="roundUp()"> Round Up</button>
+<!--                  </label>					  -->
 				  </div>
-				</div><small><i>Make payments easier by rounding off the Total.<br/>This will round up to the nearest 5. Tip % is also adjusted.</i></small>
+				</div>
 			  </li>
 				</ul>				
-	  		</div><center><button class="button" onclick="location.reload()">Reset Calculation</button></center>
+					</div><div class="buttons-row"><button class="button button-raised button-big button-fill color-red" onclick="location.reload()">Reset Calculation</button></div>
             </div>          
         </div>        
       </div>

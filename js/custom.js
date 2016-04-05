@@ -32,9 +32,9 @@ function tipStandard() {
 		
 	} else {
 	
-	document.getElementById('tipStandard').setAttribute("class",'button button-round active');
-	document.getElementById('tipKind').setAttribute("class",'button button-round');
-	document.getElementById('tipGracious').setAttribute("class",'button button-round');	
+	document.getElementById('tipStandard').setAttribute("class",'button button-raised button-fill color-blue');
+	document.getElementById('tipKind').setAttribute("class",'button button-raised');
+	document.getElementById('tipGracious').setAttribute("class",'button button-raised');	
 	
 	doCalc(1.10);
 		
@@ -49,9 +49,9 @@ function tipKind() {
 		
 	} else {
 		
-	document.getElementById('tipStandard').setAttribute("class",'button button-round');
-	document.getElementById('tipKind').setAttribute("class",'button button-round active');
-	document.getElementById('tipGracious').setAttribute("class",'button button-round');	
+	document.getElementById('tipStandard').setAttribute("class",'button button-raised');
+	document.getElementById('tipKind').setAttribute("class",'button button-raised button-fill color-purple');
+	document.getElementById('tipGracious').setAttribute("class",'button button-raised');	
 	
 	doCalc(1.15);
 		
@@ -66,9 +66,9 @@ function tipGracious() {
 		
 	} else {
 		
-	document.getElementById('tipStandard').setAttribute("class",'button button-round');
-	document.getElementById('tipKind').setAttribute("class",'button button-round');
-	document.getElementById('tipGracious').setAttribute("class",'button button-round active');	
+	document.getElementById('tipStandard').setAttribute("class",'button button-raised');
+	document.getElementById('tipKind').setAttribute("class",'button button-raised');
+	document.getElementById('tipGracious').setAttribute("class",'button button-raised button-fill color-green');	
 	
 	doCalc(1.20);
 		
@@ -102,9 +102,9 @@ function doCalc(tipamount) {
 	document.getElementById('txtTip').value = parseFloat((amount * tipamount) - amount).toFixed(2); 
 	document.getElementById('txtTotal').value = parseFloat(amount * tipamount).toFixed(2); 
 	
-	document.getElementById('roundup').setAttribute("class",'button');
-	document.getElementById('labelTip').innerHTML = "Tip (<small>" + parseFloat((tipamount - 1) * 100).toFixed(0) + "%</small>)";
-	document.getElementById('calcContent').setAttribute("class",'list-block');
+	document.getElementById('roundup').setAttribute("class",'button button-fill button-raised');
+	document.getElementById('labelTip').innerHTML = "<strong>" + parseFloat((tipamount - 1) * 100).toFixed(0) + "%</strong> Tip";
+	document.getElementById('calcContent').setAttribute("class",'list-block inputs-list');
 	
 	tipPerc = tipamount;
 }
@@ -117,11 +117,11 @@ function roundUp() {
 	var tipNew = parseFloat(totalNew - amount).toFixed(2);
 	var tipPercNew = parseFloat((tipNew / amount) * 100).toFixed(2);
 	
-	document.getElementById('labelTip').innerHTML = "Tip (<small>" + tipPercNew + "%</small>)"
+	document.getElementById('labelTip').innerHTML = "<strong>" + tipPercNew + "%</strong> Tip"
 	
 	document.getElementById('txtTotal').value = totalNew; 
 	document.getElementById('txtTip').value = tipNew;
 	
-	document.getElementById('roundup').setAttribute("class",'button active');	
+	document.getElementById('roundup').setAttribute("class",'button button-raised button-fill color-pink');	
 	
 }
