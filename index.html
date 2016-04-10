@@ -32,9 +32,10 @@
 		<h2>About tipBru</h2>
 		  <p>tipBru is a free, lightweight tip calculating utility app. It can quickly calculate the tip on your bill when you're out and about. It saves you time and from making embarrassing under-tipping mistakes.</p>
 		<h2>App Info</h2>
-		<p><i class="fa fa-flask"></i> Version 2.0.160409</p>	  	
-		<p><i class="fa fa-code"></i> Developed by Martin Grondein.</p>
+		<p><i class="fa fa-flask fa-fw"></i> Version 2.0.160410</p>	  	
+		<p><i class="fa fa-code fa-fw"></i> Developed by Martin Grondein.</p>
 	  	<p><button class="button button-fill button-raised" onclick="window.open('http://www.grondein.com')">Visit Developer's Website</button></p>
+		  
       </div>
     </div>    
     <!-- Views-->
@@ -64,7 +65,7 @@
 							  <div class="item-inner"> 
 								<div class="item-title label">Amount</div>
 								<div class="item-input item-input-field">
-								  <input type="number" placeholder="0.00" id="txtAmount" value="">
+								  <input type="text" placeholder="0.00" id="txtAmount" value="">
 								</div>
 							  </div>
 							</div>
@@ -73,12 +74,15 @@
 						</div>						
 
 					<p><strong>Tip Generosity Level</strong></p>
-					<p class="buttons-row"><a href="#" class="button button-raised button-fill color-blue" id="tipStandard" onclick="tipStandard()">Standard</a></p>
-					<p class="buttons-row"><a href="#" class="button button-raised button-fill color-purple" id="tipKind" onclick="tipKind()">Kind</a></p>
-					<p class="buttons-row"><a href="#" class="button button-raised button-fill color-green" id="tipGracious" onclick="tipGracious()">Generous</a></p>
+					<p class="buttons-row">
+						<a href="#" class="button button-raised button-fill color-blue" id="tipStandard" onclick="tipStandard()">10%</a>
+						<a href="#" class="button button-raised button-fill color-indigo" id="tipKind" onclick="tipKind()">15%</a>
+						<a href="#" class="button button-raised button-fill color-teal" id="tipGracious" onclick="tipGracious()">20%</a>
+						<a href="#" class="button button-raised button-fill color-green" id="tipGenerous" onclick="tipGenerous()">35%</a>
+					</p>
 					 
 
-			<div class="list-block inputs-list" id="calcContent">				
+			<div class="list-block inputs-list soften" id="calcContent">				
 				<ul>
                   <li>
                     <div class="item-content">
@@ -104,17 +108,14 @@
                   </li>
 				<li>
 				<div class="item-content">
-				  <div class="item-media"><i class="fa fa-arrow-circle-up fa-2x"></i></div>
-				  <div class="item-inner"> 
-<!--					<div class="item-title label">Adjust</div>-->
-<!--					<label class="label-switch">-->
+				  <div class="item-media"><i id="roundupcircle" class="fa fa-arrow-circle-up fa-2x"></i></div>
+				  <div class="item-inner">
 						<button class="button button-fill button-raised" id="roundup" onclick="roundUp()"> Round Up</button>
-<!--                  </label>					  -->
 				  </div>
 				</div>
 			  </li>
 				</ul>				
-					</div><div class="buttons-row"><button class="button button-raised button-big button-fill color-red" onclick="location.reload()">Reset Calculation</button></div>
+					</div><div class="buttons-row"><button class="button button-raised button-big button-fill color-red" onclick="location.reload()">Reset</button></div>
             </div>          
         </div>        
       </div>
@@ -125,6 +126,6 @@
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="dist/js/framework7.min.js"></script>
   	    <!-- Path to your app js-->
-    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
   </body>
 </html>

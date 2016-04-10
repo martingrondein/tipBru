@@ -1,49 +1,16 @@
-/*
-.button {
-	font-size: 10px;
-}
-
-small {
-	font-size: 11px;
-}
-
-.toolbar-inner {
-	font-size: 12px;
-}
-
-.toolbar-through .page-content {
-	padding-bottom: 0px;
-}
-
-input[type=text] {
-	text-align: right;
-}
-
-.hide {
-	display: none;
+.buttons-row .button {
+    margin-left: 10px;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
 }
 
 .content-block {
-	margin-top: 0px;
+    margin: 10px 0;
+    padding: 0 16px;
+    box-sizing: border-box;
 }
 
-.faded {
-	opacity: 0.3;
+.soften {
+	opacity: 0.1;
 }
-
-.page {
-	background: #fff;
-}
-
-.content-block {
-	color:#fff;
-}
-
-.button.button-round{
-	padding: 5px;
-    height: 40px;
-}
-
-.list-block .item-title.label {
-	width: 38%;
-}*/
