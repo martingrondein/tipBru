@@ -1,36 +1,73 @@
 # tipBru
 
-This repository contains the source code of tipBru, an Android application.
-This application was built using [Framework7](http://framework7.io/)
+## Framework7 CLI Options
 
-## Tools Used
+Framework7 app created with following options:
 
-The app was developed and compiled with the following tools:
+```
+{
+  "cwd": "/home/martingrondein/www/personal/tipBru",
+  "type": [
+    "web"
+  ],
+  "name": "tipBru",
+  "framework": "react",
+  "template": "tabs",
+  "cssPreProcessor": false,
+  "bundler": "vite",
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}
+```
 
-- Coded in HTML / CSS / Javascript
-- Using Framework7
-- Compiled with Apache Cordova (strictly using the CLI)
-- Using the Google Android SDK
-- Using JDK 8 / JRE 8
-- Coded with Brackets
+## Install Dependencies
 
-## Contributing
+First of all we need to install dependencies, run in terminal
+```
+npm install
+```
 
-Want to contribute to the project? Great! Just [fork](https://github.com/martingrondein/tipBru/fork) the project, make your
-changes and submit a [pull request](https://github.com/martingrondein/tipBru/pulls).
+## NPM Scripts
 
-## License
+* 🔥 `start` - run development server
+* 🔧 `dev` - run development server
+* 🔧 `build` - build web app for production
 
-Copyright 2016 Martin Grondein
+## Vite
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+There is a [Vite](https://vitejs.dev) bundler setup. It compiles and bundles all "front-end" resources. You should work only with files located in `/src` folder. Vite config located in `vite.config.js`.
+## Assets
 
-   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+Assets (icons, splash screens) source images located in `assets-src` folder. To generate your own icons and splash screen images, you will need to replace all assets in this directory with your own images (pay attention to image size and format), and run the following command in the project directory:
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+```
+framework7 assets
+```
+
+Or launch UI where you will be able to change icons and splash screens:
+
+```
+framework7 assets --ui
+```
+
+
+
+## Documentation & Resources
+
+* [Framework7 Core Documentation](https://framework7.io/docs/)
+
+* [Framework7 React Documentation](https://framework7.io/react/)
+
+* [Framework7 Icons Reference](https://framework7.io/icons/)
+* [Community Forum](https://forum.framework7.io)
+
+## Support Framework7
+
+Love Framework7? Support project by donating or pledging on:
+- Patreon: https://patreon.com/framework7
+- OpenCollective: https://opencollective.com/framework7

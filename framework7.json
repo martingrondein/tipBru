@@ -1,0 +1,18 @@
+{
+  "cwd": "/home/martingrondein/www/personal/tipBru",
+  "type": [
+    "web"
+  ],
+  "name": "tipBru",
+  "framework": "react",
+  "template": "tabs",
+  "cssPreProcessor": false,
+  "bundler": "vite",
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}

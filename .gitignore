@@ -1,47 +1,42 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
 
-# Folder config file
-Desktop.ini
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Dependency directories
+node_modules/
 
-# Windows shortcuts
-*.lnk
+# Optional npm cache directory
+.npm
 
-# =========================
-# Operating System Files
-# =========================
+# Optional eslint cache
+.eslintcache
 
-# OSX
-# =========================
+# Optional REPL history
+.node_repl_history
 
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# Misc
 .DS_Store
-.AppleDouble
-.LSOverride
+Thumbs.db
 
-# Thumbnails
-._*
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+
+
+# Production build
+www/
